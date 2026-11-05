@@ -15,6 +15,7 @@ export const profile = {
 };
 
 // "featured: true" shows the project as a large card
+// "demo" (optional) adds a Live demo link next to the Code link
 export const projects = [
   {
     name: "RAG Document Q&A Assistant",
@@ -44,6 +45,8 @@ export const projects = [
       "18 automated tests covering the order-to-bill flow",
     ],
     github: "https://github.com/Cma-13/RMS",
+    // Live demo: logins for each role are shown on its staff login page
+    demo: "https://seemasingdan77.pythonanywhere.com",
   },
   {
     name: "Employee Management System",
