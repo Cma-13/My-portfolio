@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F6F5F1;
+  --color-card: #FFFFFF;
+  --color-ink: #15171A;
+  --color-muted: #5B616B;
+  --color-line: #E2E0D9;
+  --color-crimson: #C8102E;
+  --color-crimson-dark: #A00D25;
+
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Instrument Sans Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Keyboard focus that is easy to see */
+:focus-visible {
+  outline: 2px solid var(--color-crimson);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* The one entrance animation: the name rises into place on load */
+@keyframes rise {
+  from { transform: translateY(0.35em); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.rise {
+  animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.rise-late {
+  animation: rise 0.9s 0.25s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rise, .rise-late { animation: none; }
+}
