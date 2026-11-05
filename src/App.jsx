@@ -134,6 +134,21 @@ function Highlights({ items }) {
   );
 }
 
+function ProjectLinks({ project, className = "" }) {
+  return (
+    <div className={`flex flex-wrap items-center gap-x-6 gap-y-2 ${className}`}>
+      {project.demo && (
+        <ExternalLink href={project.demo} className="text-crimson hover:text-crimson-dark" label={`Live demo of ${project.name}`}>
+          Live demo
+        </ExternalLink>
+      )}
+      <ExternalLink href={project.github} className="text-sm text-muted hover:text-ink" label={`Code for ${project.name} on GitHub`}>
+        Code
+      </ExternalLink>
+    </div>
+  );
+}
+
 function FeaturedProject({ project }) {
   return (
     <article className="rounded-2xl bg-card border border-line p-7 sm:p-10 grid lg:grid-cols-2 gap-8 lg:gap-14">
@@ -144,9 +159,7 @@ function FeaturedProject({ project }) {
         <div className="mt-6">
           <TechList tech={project.tech} />
         </div>
-        <ExternalLink href={project.github} className="mt-7 text-sm text-muted hover:text-ink" label={`Code for ${project.name} on GitHub`}>
-          Code
-        </ExternalLink>
+        <ProjectLinks project={project} className="mt-7" />
       </div>
       <div className="lg:border-l lg:border-line lg:pl-14">
         <h4 className="font-display text-lg font-semibold mb-4">What I built</h4>
@@ -167,9 +180,7 @@ function SmallProject({ project }) {
       <div className="mt-6">
         <TechList tech={project.tech} />
       </div>
-      <ExternalLink href={project.github} className="mt-6 self-start text-sm text-muted hover:text-ink" label={`Code for ${project.name} on GitHub`}>
-        Code
-      </ExternalLink>
+      <ProjectLinks project={project} className="mt-6" />
     </article>
   );
 }
