@@ -9,12 +9,13 @@ function ArrowUpRight({ className = "w-4 h-4" }) {
   );
 }
 
-function ExternalLink({ href, children, className = "" }) {
+function ExternalLink({ href, children, className = "", label }) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noreferrer"
+      aria-label={label}
       className={`inline-flex items-center gap-1 font-medium underline decoration-line decoration-2 underline-offset-4 hover:decoration-crimson transition-colors ${className}`}
     >
       {children}
@@ -143,8 +144,8 @@ function FeaturedProject({ project }) {
         <div className="mt-6">
           <TechList tech={project.tech} />
         </div>
-        <ExternalLink href={project.github} className="mt-7">
-          View code on GitHub
+        <ExternalLink href={project.github} className="mt-7 text-sm text-muted hover:text-ink" label={`Code for ${project.name} on GitHub`}>
+          Code
         </ExternalLink>
       </div>
       <div className="lg:border-l lg:border-line lg:pl-14">
@@ -166,8 +167,8 @@ function SmallProject({ project }) {
       <div className="mt-6">
         <TechList tech={project.tech} />
       </div>
-      <ExternalLink href={project.github} className="mt-6 self-start">
-        View code on GitHub
+      <ExternalLink href={project.github} className="mt-6 self-start text-sm text-muted hover:text-ink" label={`Code for ${project.name} on GitHub`}>
+        Code
       </ExternalLink>
     </article>
   );
@@ -256,7 +257,7 @@ function Contact() {
         {profile.email}
       </a>
       <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-lg">
-        <span className="text-muted">{profile.location}</span>
+        <span className="text-muted">Based in {profile.location}</span>
         <a href={`tel:${profile.phone.replace(/\s/g, "")}`} className="font-medium underline decoration-line decoration-2 underline-offset-4 hover:decoration-crimson">
           {profile.phone}
         </a>
