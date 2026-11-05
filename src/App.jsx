@@ -257,7 +257,7 @@ function Contact() {
         {profile.email}
       </a>
       <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-lg">
-        <span className="text-muted">Based in {profile.location}</span>
+        <span className="text-muted">{profile.location}</span>
         <a href={`tel:${profile.phone.replace(/\s/g, "")}`} className="font-medium underline decoration-line decoration-2 underline-offset-4 hover:decoration-crimson">
           {profile.phone}
         </a>
