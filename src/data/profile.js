@@ -98,6 +98,7 @@ export const education = [
 ];
 
 export const certificates = [
+  { title: "Mastering AI with Effective Prompt Engineering", issuer: "National Academy of Vocational Training (NAVT)", date: "November 2026" },
   { title: "Python with Django Course", issuer: "Code IT", date: "July 2026" },
   { title: "Data Analytics with AI Workshop", issuer: "DLYTICA Academy", date: "July 2026" },
   { title: "Data Science with Python Bootcamp", issuer: "Dursikshya Education Network", date: "March 2025" },
