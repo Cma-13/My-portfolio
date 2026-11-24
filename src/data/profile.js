@@ -11,7 +11,7 @@ export const profile = {
   email: "singdanseema013@gmail.com",
   phone: "+977 9803625613",
   github: "https://github.com/Cma-13",
-  linkedin: "https://www.linkedin.com/in/seema-singdan-16a712370",
+  linkedin: "https://www.linkedin.com/in/seema-s-16a712370/",
 };
 
 // "featured: true" shows the project as a large card
