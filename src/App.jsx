@@ -97,7 +97,7 @@ function Hero() {
             <ExternalLink href={profile.github}>GitHub</ExternalLink>
             <ExternalLink href={profile.linkedin}>LinkedIn</ExternalLink>
             <a
-              href={`mailto:${profile.email}`}
+              href="#contact"
               className="font-medium underline decoration-line decoration-2 underline-offset-4 hover:decoration-crimson transition-colors"
             >
               Email me
