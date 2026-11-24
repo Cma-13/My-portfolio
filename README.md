@@ -2,15 +2,10 @@
 
 **Live site: [seemasingdan.com.np](https://seemasingdan.com.np)**
 
-My personal portfolio as a Python developer. It shows my projects (with links to their code and live demos),
+This is my personal portfolio. It shows my projects (with links to their code and live demos),
 my skills, education, certificates and how to contact me.
 
 Built with React, Vite and Tailwind CSS, and hosted on Vercel.
-
-## How it is deployed
-
-The site is connected to this GitHub repo through Vercel. Every push to the `main` branch builds and
-publishes the site automatically, usually within a minute. The domain `seemasingdan.com.np` points to Vercel.
 
 ## Update the content
 
