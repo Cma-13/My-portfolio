@@ -3,7 +3,7 @@
 
 export const profile = {
   name: "Seema Singdan",
-  role: "Python developer",
+  role: "Software and AI developer",
   location: "Kathmandu, Nepal",
   intro:
     "I build web apps with Django and FastAPI, and lately AI tools that answer questions from your own documents. " +
