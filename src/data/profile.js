@@ -51,12 +51,14 @@ export const projects = [
   {
     name: "Employee Management System",
     summary:
-      "HR platform with face-recognition attendance and a model that predicts leave approval.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Flask", "scikit-learn"],
+      "HR platform where employees check in with their face, apply for leave under real company rules and get paid with " +
+      "unpaid days deducted automatically. Built as a team final year project.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Flask", "scikit-learn", "OpenCV"],
     highlights: [
-      "Face recognition attendance with liveness detection against photo spoofing",
-      "Leave prediction with a Random Forest and Bayesian hybrid model",
-      "Four services running together: React, Node.js API and two Flask services",
+      "Face recognition check-in and check-out with automatic Present, Late or Half Day status",
+      "Leave approval score that blends a Random Forest, each employee's own history and HR rules, and explains why",
+      "Payroll that deducts unpaid leave and absent days automatically, counting working days only",
+      "Four services working together, admin-only routes, and tests that run on GitHub Actions",
     ],
     github: "https://github.com/Cma-13/EMS",
   },
