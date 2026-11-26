@@ -169,35 +169,12 @@ function FeaturedProject({ project }) {
   );
 }
 
-function SmallProject({ project }) {
-  return (
-    <article className="rounded-2xl bg-card border border-line p-7 flex flex-col">
-      <h3 className="font-display text-2xl font-bold tracking-tight">{project.name}</h3>
-      <p className="mt-3 leading-relaxed">{project.summary}</p>
-      <div className="mt-5">
-        <Highlights items={project.highlights} />
-      </div>
-      <div className="mt-6">
-        <TechList tech={project.tech} />
-      </div>
-      <ProjectLinks project={project} className="mt-6" />
-    </article>
-  );
-}
-
 function Projects() {
-  const featured = projects.filter((p) => p.featured);
-  const others = projects.filter((p) => !p.featured);
   return (
     <Section id="projects" title="Projects" intro="From AI tools to full restaurant software. All code is on GitHub.">
       <div className="space-y-6">
-        {featured.map((p) => (
+        {projects.map((p) => (
           <FeaturedProject key={p.name} project={p} />
-        ))}
-      </div>
-      <div className="mt-6 grid md:grid-cols-2 gap-6">
-        {others.map((p) => (
-          <SmallProject key={p.name} project={p} />
         ))}
       </div>
     </Section>
