@@ -14,14 +14,13 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/seema-s-16a712370/",
 };
 
-// "featured: true" shows the project as a large card
 // "demo" (optional) adds a Live demo link next to the Code link
 export const projects = [
   {
     name: "RAG Document Q&A Assistant",
+    subtitle: "AI assistant for your own documents",
     summary:
       "Upload PDFs and ask questions. Answers come only from your documents, with the page they were found on.",
-    featured: true,
     tech: ["FastAPI", "Next.js", "PostgreSQL", "pgvector", "Groq", "Ollama", "MCP", "Docker"],
     highlights: [
       "Hybrid search that combines vector similarity with Postgres full-text search",
@@ -32,11 +31,24 @@ export const projects = [
     github: "https://github.com/Cma-13/rag-assistant-tool",
   },
   {
+    name: "Employee Management System",
+    subtitle: "HR platform, team final year project",
+    summary:
+      "Employees check in with their face, apply for leave under real company rules and get paid with unpaid days deducted automatically.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Flask", "scikit-learn", "OpenCV"],
+    highlights: [
+      "Face recognition check-in and check-out with automatic Present, Late or Half Day status",
+      "Leave approval score that blends a Random Forest, each employee's own history and HR rules, and explains why",
+      "Payroll that deducts unpaid leave and absent days automatically, counting working days only",
+      "Four services working together, admin-only routes, and tests that run on GitHub Actions",
+    ],
+    github: "https://github.com/Cma-13/EMS",
+  },
+  {
     name: "EkdamMithoo",
     subtitle: "Restaurant Management System",
     summary:
       "Runs a Nepali restaurant from the first order to the final bill, with a public website for the menu and table booking.",
-    featured: true,
     tech: ["Django", "Python", "SQLite", "Tailwind CSS", "JavaScript", "ESC/POS"],
     highlights: [
       "Live dashboards for waiter, kitchen, billing and owner that update as orders move",
@@ -49,27 +61,15 @@ export const projects = [
     demo: "https://seemasingdan77.pythonanywhere.com",
   },
   {
-    name: "Employee Management System",
-    summary:
-      "HR platform where employees check in with their face, apply for leave under real company rules and get paid with " +
-      "unpaid days deducted automatically. Built as a team final year project.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Flask", "scikit-learn", "OpenCV"],
-    highlights: [
-      "Face recognition check-in and check-out with automatic Present, Late or Half Day status",
-      "Leave approval score that blends a Random Forest, each employee's own history and HR rules, and explains why",
-      "Payroll that deducts unpaid leave and absent days automatically, counting working days only",
-      "Four services working together, admin-only routes, and tests that run on GitHub Actions",
-    ],
-    github: "https://github.com/Cma-13/EMS",
-  },
-  {
     name: "Spam Classification and Anomaly Detection",
+    subtitle: "Machine learning project",
     summary:
       "Detects spam SMS by combining classic classifiers with clustering to catch unusual messages.",
     tech: ["Python", "scikit-learn", "Jupyter"],
     highlights: [
       "Naive Bayes, Random Forest and SVM classifiers compared side by side",
-      "KMeans and DBSCAN clustering, with PCA to visualise the groups",
+      "KMeans and DBSCAN clustering to find unusual messages",
+      "PCA to visualise how the messages group together",
     ],
     github: "https://github.com/Cma-13/Hybrid-Pattern-Recognition-System-for-Spam-Classification-and-Anomaly-Detection",
   },
